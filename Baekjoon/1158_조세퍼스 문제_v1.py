@@ -1,4 +1,5 @@
 #https://www.acmicpc.net/submit/1158/8735288
+#https://www.acmicpc.net/problem/11866 완전히 같은 문제
 #31752 KB 6452 ms
 from sys import stdin
 from collections import deque
