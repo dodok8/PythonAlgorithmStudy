@@ -1,4 +1,5 @@
 # https://www.acmicpc.net/problem/10845
+# 31752 KB 	796 ms
 from sys import stdin
 from collections import deque
 q = deque()
@@ -7,30 +8,30 @@ def command(string):
         if q:
             a = q.popleft()
             q.appendleft(a)
-            return a
+            print(a)
         else:
-            return -1
+            print(-1)
     elif string == 'back':
         if q:
             a = q.pop()
             q.append(a)
-            return a
+            print(a)
         else :
-            return -1
+            print(-1)
     elif string == 'empty':
         if q:
-            return 0
+            print(0)
         else :
-            return 1
+            print(1)
     elif string == 'size':
-        return len(q)
+        print(len(q))
     elif string == 'pop':
         if q:
-            return q.popleft()
+            print(q.popleft())
         else:
-            return -1
+            print(-1)
     else:
-        a,b = string.split()
-        q.append(int(b))
+        a = string.split()
+        q.append(int(a[1]))
 for _ in range(int(stdin.readline())):
-    command(stdin.readline())
+    command(input())
