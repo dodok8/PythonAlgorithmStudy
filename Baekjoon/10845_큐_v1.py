@@ -1,5 +1,6 @@
 # https://www.acmicpc.net/problem/10845
 # 31752 KB 	796 ms
+#PyPy3 126172 KB 704 ms
 from sys import stdin
 from collections import deque
 q = deque()
