@@ -1,5 +1,6 @@
 #https://www.acmicpc.net/problem/1676
 #1번 틀림
+#PyPy 117076KB 112ms
 from sys import stdin
 n = int(stdin.readline())
 squares = 5
