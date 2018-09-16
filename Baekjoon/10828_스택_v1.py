@@ -1,12 +1,12 @@
 #https://www.acmicpc.net/problem/10828
-# 런타임 에러 3번 골 때리는 건 내 컴에서는 재현이 안된다.
+#PyPy3 121516KB 216ms
 import sys
 from collections import deque
 q = deque()
 def stack(string):
     a = list(string.split())
     if a[0] == 'push':
-        q.append(int(a[1]))
+        q.append(a[1])
     if a[0] == 'pop':
         if q :
             b = q.pop()
@@ -21,9 +21,12 @@ def stack(string):
         else:
             print(1)
     if a[0] == 'top':
-        b = q.pop()
-        q.append(b)
-        print(b)
+        if q :
+            b = q.pop()
+            q.append(b)
+            print(b)
+        else :
+            print(-1)
     return
 for i in range(int(sys.stdin.readline())):
     stack(sys.stdin.readline())
