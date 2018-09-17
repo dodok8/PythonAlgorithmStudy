@@ -36,4 +36,4 @@ visitedAll = (1 << n) - 1
 aList = list()
 for i in range(1,n):
     aList.append(DP(i,visitedAll)+w[i][0])
-print(type(min(aList)))
+print(min(aList))
