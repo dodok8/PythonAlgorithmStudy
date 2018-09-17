@@ -24,7 +24,7 @@ def DP(u,a) :
     else :
         compareList = list()
         for i in range(n):
-            if i != u and ((a >> i) & 1):
+            if i != u & ((a >> i) & 1):
                 compareList.append(DP(i,a)+w[i][u])
         dpList[u][a] = min(compareList)
         return dpList[u][a]
