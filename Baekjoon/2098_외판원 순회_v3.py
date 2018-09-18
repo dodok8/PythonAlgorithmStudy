@@ -27,7 +27,7 @@ def DP(now: int, visited: int) -> int:
     if dpList[now][visited] == -1:
         compareList = list()
         visitedBefore = visited & (~(1 << now))
-        for i in range(n):
+        for i in range(visitedBefore.bit_length())):
             if (visitedBefore >> i) & 1:
                 before = i
             else:
