@@ -1,39 +1,40 @@
 # https://www.acmicpc.net/problem/2098
-
+# 일단 무한루프를 내부에서 도는 것 같다. 그 때문에 비정상 종료 발생
 from math import inf
-from sys import stdin,setrecursionlimit
-
-setrecursionlimit(10**9)
+from sys import stdin
 
 def DP(now, visited):
-    global dpList, visitedAll,w
-    if now == 0:
-        #시작 점 초기화
-        if visited == 1:
-            dpList[now][visited] = 0
-        #시작한 상황인데 이미 방문한 곳이 1이상인 이상한 경우 제외
-        else :
-            dpList[now][visited] = inf
-    if dpList[now][visited] != None:
-        pass
+    global dpList, visitedAll,w,n
+    if dpList[now][visited] != -1:
+        print(now, visited, "dp")
+        return dpList[now][visited]
     else:
+        print(now, visited, "dp")
         #여기서 부터는 아직 방문 안한 거
         tempVal = inf
         visitedExceptNow = visited & (~now)
-        for i in range(n):
-            if (visitedExceptNow >> i) & 1:
-                before = i
-                tempVal = min(tempVal, DP(before,visitedExceptNow)+w[before][now])
+        for before in range(n):
+            if (before != now) and ((visited>>before)&1):
+                if w[before][now] is None :
+                    continue
+                else:
+                    tempVal = min(tempVal, DP(before,visited-(1<<now))+w[before][now])
         dpList[now][visited] = tempVal
-    return dpList[now][visited]
+        return dpList[now][visited]
 
 n = int(stdin.readline())
-w = list()
-for _ in range(n):
-    w.append([inf if int(i) == 0 else int(i) for i in stdin.readline().split()])
-dpList = [[None for _ in range(1 << n)] for __ in range(n)]
+w = [[] for _ in range(n)]
+for i in range(n):
+    for j in map(int, stdin.readline().split()):
+        if j == 0:
+            w[i].append(None)
+        else :
+            w[i].append(j)
+dpList = [[ -1 for _ in range(1 << n)] for __ in range(n)]
+for j in range(1 << n):
+    if j == 1:
+        dpList[0][j] = 0
+    else :
+        dpList[0][j] = inf
 visitedAll = (1 << n) - 1
-aList = list()
-for i in range(1,n):
-    aList.append(DP(i,visitedAll)+w[i][0])
-print(min(aList))
+print(DP(1,visitedAll)+w[1][0])
