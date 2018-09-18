@@ -1,5 +1,6 @@
 # https://www.acmicpc.net/problem/2098
 # none 과 int는 같은 리스트 있는 상태에서 min을 쓸 수 없다.
+# PyPy3 161552KB 448ms 
 from sys import stdin
 
 n = int(stdin.readline())
