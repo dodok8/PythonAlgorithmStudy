@@ -1,5 +1,5 @@
 # https://www.acmicpc.net/problem/2042
-# 런타임 에러 1번
+# 런타임 에러 1번 틀림 1번
 from sys import stdin
 
 n, m, k = map(int,stdin.readline().split())
@@ -17,7 +17,7 @@ def update(location, diff):
 
 def sum(l,r):
     left = min(l,r)
-    right = min(r,l)
+    right = max(r,l)
     global treeList, n
     if left == right:
         return treeList[left]
