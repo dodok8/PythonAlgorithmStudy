@@ -16,20 +16,22 @@ def update(location, diff):
         update(location//2, diff)
 
 def sum(l,r):
+    left = min(l,r)
+    right = min(r,l)
     global treeList, n
-    if l == r:
-        return treeList[l]
-    res = sum((l+1)//2,(r-1)//2)
-    if l%2 == 1:
-        res += treeList[l]
-    if r%2 == 0:
-        res += treeList[r]
+    if left == right:
+        return treeList[left]
+    res = sum((left+1)//2,(right-1)//2)
+    if left%2 == 1:
+        res += treeList[left]
+    if right%2 == 0:
+        res += treeList[right]
     return res
 
 for i in range(n):
     update((1 << N) + i,int(stdin.readline()))
 
-for i in range(n):
+for i in range(m+k):
     a,b,c = map(int,stdin.readline().split())
     if a == 1:
         #숫자 바꾸기
