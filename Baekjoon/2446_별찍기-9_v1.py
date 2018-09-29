@@ -1,4 +1,5 @@
 #https://www.acmicpc.net/problem/2446
+#PyPy3 117592KB 104ms
 from sys import stdin
 
 n = int(stdin.readline())
