@@ -9,5 +9,9 @@ for i in range(N):
     for i in range(int(stdin.readline())):
         girl_groups[group_name].append(stdin.readline())
 for i in range(M):
-    
+    quiz = int(stdin.readline())
+    if quiz == 1:
+        # 그룹 멤버 출력
+    else:
+        # 어느 그룹인지 출력
 
