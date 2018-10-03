@@ -1,20 +1,46 @@
 '''
 링크: https://www.acmicpc.net/problem/9663
-PyPy3  120828KB 416ms
-1328번 고층빌딩과 사실상 같은 문제
+PyPy3  
 '''
 
 from sys import stdin
 
 
-def place_queen(x y, value):
+def place_queen(x: int, y: int, value):
     global chess_board, n
     for i in range(n):
         chess_board[x][i] = False
         chess_board{i}[y] = False
-
-    # 퀸을 놓는 함수
+    i = x - 1
+    j = y - 1
+    while(x >= 0 and y >= 0):
+        chess_board[i][j] = False
+        i -= 1
+        j -= 1
+    i = x + 1
+    j = y + 1
+    while(k < n and l < n):
+        chess_board[i][j] = False
+        i += 1
+        j += 1
+    i = x - 1
+    j = y + 1
+    while(x >= 0 and y < n):
+        chess_board[i][j] = False
+        i -= 1
+        j += 1
+    i = x + 1
+    j = y - 1
+    while(x < n and y >= 0):
+        chess_board[i][j] = False
+        i += 1
+        j -= 1
+    i = x + 1
+    j = y - 1
 
 
 n = int(stdin.readline())
 chess_board = [[True for _ in range(n)] for __ in range(n)]
+last_x = 0
+last_y = 0
+count = 0
