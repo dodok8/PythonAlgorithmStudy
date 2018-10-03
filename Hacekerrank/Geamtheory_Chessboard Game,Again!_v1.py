@@ -27,12 +27,12 @@ for i in range(3, 15):
     for j in range(3, 15):
         g[i][j] = mex(g[i-2][j-1], g[i-2][j+1], g[i+1][j-2], g[i-1][j-2])
 
-aList = list()
+a_list = list()
 
 for T in range(int(sys.stdin.readline())):
     for k in range(int(sys.stdin.readline())):
-        x, y = map(int(sys.stdin.readline()).split())
-        aList.append(g[x][y])
+        x, y = map(int, sys.stdin.readline().split())
+        a_list.append(g[x][y])
     b = aList.pop
     for i in aList:
         b = b ^ i

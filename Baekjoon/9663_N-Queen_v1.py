@@ -1,9 +1,13 @@
-# https://www.acmicpc.net/problem/9663
+'''
+링크: https://www.acmicpc.net/problem/9663
+PyPy3  120828KB 416ms
+1328번 고층빌딩과 사실상 같은 문제
+'''
 
 from sys import stdin
 
 
-def update(x: int y: int, value: bool) -> None:
+def place_queen(x y, value):
     global chess_board, n
     for i in range(n):
         chess_board[x][i] = False

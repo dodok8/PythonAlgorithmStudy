@@ -1,6 +1,7 @@
 '''
 링크: https://www.acmicpc.net/problem/1717
 PyPy3  227656KB  952ms
+Disjoint set의 구현
 '''
 
 import random

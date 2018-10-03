@@ -9,6 +9,7 @@ dp = [[-1 for _ in range(15)] for __ in range(1 << 15)]
 
 
 def solve(x, y, p, q):
+    global dp
     if y == m:
         return solve(x+1, 0, q, 0)
     if x == n:

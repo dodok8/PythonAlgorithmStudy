@@ -1,4 +1,7 @@
-# https://www.acmicpc.net/problem/16165
+'''
+https://www.acmicpc.net/problem/16165
+PyPy3 
+'''
 from sys import stdin
 
 N, M = map(int, stdin.readline().split())
@@ -11,7 +14,8 @@ for i in range(N):
 for i in range(M):
     quiz = int(stdin.readline())
     if quiz == 1:
-        # 그룹 멤버 출력
+        question = 
+        print('hello')
     else:
         # 어느 그룹인지 출력
         for i in girl_groups.keys():

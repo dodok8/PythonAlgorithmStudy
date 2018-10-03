@@ -1,38 +1,37 @@
 '''
-링크: 
+링크: https://www.acmicpc.net/problem/2748
 런타임 에러:
 틀렸습니다:
 메모리 초과:
 시간초과:
 Python3  KB  ms
-PyPy3  KB  ms
+PyPy3  117076KB 108ms
 '''
 
-# https://www.acmicpc.net/problem/2748
-# PyPy3 117076KB 108ms
 from sys import stdin
 
 
-class FbList:
+class Fibo():
     def __init__(self, n):
-        self.fbList = [-1 for i in range(n+1)]
-        self.fbList[0] = 0
-        self.fbList[1] = 1
-        self.size = int(len(self.fbList))
+        self.fibo_list = [-1 for i in range(n+1)]
+        self.fibo_list[0] = 0
+        self.fibo_list[1] = 1
+        self.size = int(len(self.fibo_list))
 
-    def getValue(self, *args):
+    def get_value(self, *args):
         if args:
             n = args[0]
             if n > self.size:
-                self.fbList.extend([-1 for i in range(n-self.size)])
-                self.get(n)
+                self.fibo_list.extend([-1 for i in range(n-self.size)])
+                self.get_value(n)
             else:
-                if self.fbList[n] == -1:
-                    self.fbList[n] = self.getValue(n-1) + self.getValue(n-2)
-                return self.fbList[n]
+                if self.fibo_list[n] == -1:
+                    self.fibo_list[n] = (self.get_value(n-1)
+                                         + self.get_value(n-2))
+                return self.fibo_list[n]
         else:
-            return self.getValue(len(self.fbList)-1)
+            return self.get_value(len(self.fibo_list)-1)
 
 
-fibo = FbList(int(stdin.readline()))
-print(fibo.getValue())
+fibo = Fibo(int(stdin.readline()))
+print(fibo.get_value())

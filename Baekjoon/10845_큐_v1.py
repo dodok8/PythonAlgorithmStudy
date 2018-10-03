@@ -1,12 +1,17 @@
-# https://www.acmicpc.net/problem/10845
-# 31752 KB 	796 ms
-# PyPy3 126172 KB 704 ms
+'''
+링크: https://www.acmicpc.net/problem/10845
+Python3 31752KB 796 ms
+PyPy3  126172 KB 704 ms
+파이썬에서 큐와 스택은 colltions.deque()을 사용하자.
+'''
+
 from sys import stdin
 from collections import deque
 q = deque()
 
 
 def command(string):
+    global q
     if string == 'front':
         if q:
             a = q.popleft()
