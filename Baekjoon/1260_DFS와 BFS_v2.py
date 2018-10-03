@@ -11,20 +11,20 @@ import sys
 class Graph:
     def __init__(self, N, M):  # 정점의 개수 N 간선의 개수 M
         self.graph_list = [[]for _ in range(N+1)]
+        self.visited = [False for _ in range(N+1)]
         for i in range(M):
             a, b = map(int, sys.stdin.readline().split())
             self.graph_list[a].append(b)
             self.graph_list[b].append(a)
-        self.visited = [False for _ in range(N+1)]
 
     def clear(self):
         self.visited = [False for _ in range(N+1)]
 
     def DFS(self, start):
-        visited[start] = True
+        self.visited[start] = True
         for i in range(len(self.graph_list[start])):
             start = self.graph_list[start][i]
-            if self.visted[start] is False:
+            if self.visited[start] is False:
                 self.DFS(start)
 
 
