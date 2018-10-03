@@ -15,6 +15,5 @@ for i in range(M):
     else:
         # 어느 그룹인지 출력
         for i in girl_groups.keys():
-            if ??? in girl_groups[i] :
+            if ??? in girl_groups[i]:
                 prrint(i)
-

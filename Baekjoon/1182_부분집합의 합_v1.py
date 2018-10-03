@@ -8,10 +8,10 @@ n, goal_sum = map(int, stdin.readline().split())
 num_list = list(map(int, stdin.readline().split()))
 ways = 0
 
-for i in range(1,1 << n):
+for i in range(1, 1 << n):
     now_sum = 0
     for j in range(n):
-        if (i >> j)%2 == 1:
+        if (i >> j) % 2 == 1:
             # 포함 된다는 의미
             now_sum += num_list[j]
     if now_sum == goal_sum:
