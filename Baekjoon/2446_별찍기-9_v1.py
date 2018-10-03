@@ -1,5 +1,11 @@
-# https://www.acmicpc.net/problem/2446
-# PyPy3 117592KB 104ms
+'''
+링크: https://www.acmicpc.net/problem/2446
+런타임 에러:
+틀렸습니다:
+메모리 초과:
+시간초과:
+PyPy3  117592KB 104ms
+'''
 from sys import stdin
 
 n = int(stdin.readline())

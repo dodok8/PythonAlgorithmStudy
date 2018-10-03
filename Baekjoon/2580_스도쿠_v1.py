@@ -1,6 +1,14 @@
-# https://www.acmicpc.net/problem/2580
-# 일단 논리형 배열 잡는 게 제일 편해 보인다.
-# 근데 비트 마스크 써도 크게 다르지 않을 듯
+'''
+링크: https://www.acmicpc.net/problem/2580
+런타임 에러:
+틀렸습니다:
+메모리 초과:
+시간초과:
+PyPy3  
+논리형 배열을 쓰는 게 편하긴 할듯
+TODO: 구현 완성
+'''
+
 from sys import stdin
 
 all_numbers = (2 << 9) - 1

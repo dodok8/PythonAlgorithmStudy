@@ -1,5 +1,7 @@
-# https://www.acmicpc.net/problem/2098
-
+'''
+링크: https://www.acmicpc.net/problem/2098
+비트 마스크를 잘못 적용함, 무한 루프 발생
+'''
 MAX_INF = 100000000
 import sys
 

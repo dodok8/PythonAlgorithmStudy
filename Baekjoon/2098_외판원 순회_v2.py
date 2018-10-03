@@ -1,5 +1,7 @@
-# https://www.acmicpc.net/problem/2098
-# 일단 무한루프를 내부에서 도는 것 같다. 그 때문에 비정상 종료 발생
+'''
+링크: https://www.acmicpc.net/problem/2098
+비트 마스크를 잘못 적용함, 무한 루프 발생
+'''
 from math import inf
 from sys import stdin
 

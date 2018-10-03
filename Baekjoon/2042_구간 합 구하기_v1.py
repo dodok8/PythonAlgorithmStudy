@@ -1,5 +1,12 @@
-# https://www.acmicpc.net/problem/2042
-# 런타임 에러 1번 틀림 1번
+'''
+링크: https://www.acmicpc.net/problem/2042
+런타임 에러: 1번
+틀렸습니다: 1번
+메모리 초과:
+시간초과:
+PyPy3  KB  ms
+TODO: 예제 케이스는 다 맞는 데 왜 틀릴까? 추가 테스트 케이스를 알아보자
+'''
 from sys import stdin
 
 n, m, k = map(int, stdin.readline().split())
