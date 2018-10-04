@@ -6,7 +6,7 @@ PyPy3
 from sys import stdin
 
 
-def place_queen(x: int, y: int, value):
+def place_queen(x: int, y: int, value: bool):
     global chess_board, n
     for i in range(n):
         chess_board[x][i] = False
@@ -44,3 +44,4 @@ chess_board = [[True for _ in range(n)] for __ in range(n)]
 last_x = 0
 last_y = 0
 count = 0
+
