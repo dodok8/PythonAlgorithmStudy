@@ -23,7 +23,7 @@ visited = defdict(lambda: False)
 visited[now_board_number] = True
 distance = [0 for _ in range(362880)] #현재 거리에서 얼마나 멀리 떨어져 있는 지 측정
 
-def BFS(start):
+def BFS_final(start):
     global visited, final_board, distance
     queue = deque()
     queue.append(start)
@@ -36,10 +36,10 @@ def BFS(start):
                 if i == final_board:
                     visited[i] = True
                     distance[i] = distance[now] + 1 
-                    # 도착 한거니깐 이 때까지 값 반환
+                    # 도착한거니깐 이 때까지 값 반환
                     return distance[i]
                 else:
                     visited[i] = True
                     distance[i] = distance[now] + 1
-                    queue.append(i)
+                    queue.append(i) #다음 now 포인트가 될 테니 큐에 넣기
     #제대로 작동할지는 모르겠는데 어찌되었든 BFS 완성
