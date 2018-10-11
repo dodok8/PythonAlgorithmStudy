@@ -30,7 +30,7 @@ def get_connected_nodes(now: int):
     connected_list = list()
     swap_list = [1, -1, -3, 3]
     try:
-        x = temp_board.index('0') #여기서 0 이 없는게 맨 앞 자리로 가서 그런거 아닐까?
+        x = temp_board.index('0')
     except:
         x = 0
         temp_board.insert(0,'0')
