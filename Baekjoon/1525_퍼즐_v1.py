@@ -69,5 +69,6 @@ def BFS_final(start):
                     visited[i] = True
                     distance[i] = distance[now] + 1
                     queue.append(i)
+    return -1
 
 print(BFS_final(now_board_number))
