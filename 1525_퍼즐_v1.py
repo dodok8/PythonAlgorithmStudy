@@ -69,7 +69,6 @@ def BFS_final(start):
                 else:
                     visited[i] = True
                     distance[i] = distance[now] + 1
-                    queue.append(i)  # 다음 now 포인트가 될 테니 큐에 넣기
-    # 제대로 작동할지는 모르겠는데 어찌되었든 BFS 완성
+                    queue.append(i)
 
 print(BFS_final(now_board_number))
