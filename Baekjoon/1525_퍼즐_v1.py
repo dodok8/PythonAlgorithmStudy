@@ -1,10 +1,10 @@
 '''
 링크: https://www.acmicpc.net/problem/1525
 런타임 에러:
-틀렸습니다:
-메모리 초과: 1
+틀렸습니다: 1
+메모리 초과: 2
 시간초과:
-Python3  KB  ms
+Python3  61812KB  1532ms
 PyPy3  KB  ms
 '''
 from sys import stdin
@@ -36,13 +36,13 @@ def get_connected_nodes(now: int):
         temp_board.insert(0,'0')
     else:
         x = temp_board.index('0')
-        if x%3 == 2:
-            swap_list.append(-1)
-        elif x%3 == 0:
-            swap_list.append(1)
-        else:
-            swap_list.append(1)
-            swap_list.append(-1)
+    if x%3 == 2:
+        swap_list.append(-1)
+    elif x%3 == 0:
+        swap_list.append(1)
+    else:
+        swap_list.append(1)
+        swap_list.append(-1)
     for i in swap_list:
         if x+i < 0 or x+i > 8:
             continue
