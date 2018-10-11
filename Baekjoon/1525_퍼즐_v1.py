@@ -37,8 +37,8 @@ def get_connected_nodes(now: int):
     else:
         x = temp_board.index('0')
     for i in swap_list:
-        if x+i < 0 or x+i >= 9:
-            pass
+        if x+i < 0 or x+i > 8:
+            continue
         else:
             temp_board[x], temp_board[x+i] = temp_board[x+i], temp_board[x]
             temp_sum = ''.join(temp_board)
