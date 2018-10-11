@@ -2,7 +2,7 @@
 링크: https://www.acmicpc.net/problem/1525
 런타임 에러:
 틀렸습니다:
-메모리 초과:
+메모리 초과: 1
 시간초과:
 Python3  KB  ms
 PyPy3  KB  ms
@@ -28,7 +28,7 @@ def convert_9(n: int) -> str:
 def get_connected_nodes(now: int):
     temp_board = list(convert_9(now))
     connected_list = list()
-    swap_list = [1, -1, -3, 3]
+    swap_list = [-3, 3]
     try:
         x = temp_board.index('0')
     except:
@@ -36,6 +36,13 @@ def get_connected_nodes(now: int):
         temp_board.insert(0,'0')
     else:
         x = temp_board.index('0')
+        if x%3 == 2:
+            swap_list.append(-1)
+        elif x%3 == 0:
+            swap_list.append(1)
+        else:
+            swap_list.append(1)
+            swap_list.append(-1)
     for i in swap_list:
         if x+i < 0 or x+i > 8:
             continue
