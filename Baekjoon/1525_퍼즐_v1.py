@@ -44,8 +44,6 @@ def get_connected_nodes(now: int):
             temp_sum = ''.join(temp_board)
             connected_list.append(int(temp_sum, 9))
             temp_board[x], temp_board[x+i] = temp_board[x+i], temp_board[x]
-    #for i in connected_list:
-    #    print(convert_9(i))
     return connected_list
 
 
