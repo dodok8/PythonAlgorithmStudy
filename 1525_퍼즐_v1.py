@@ -14,6 +14,7 @@ board = list()
 for i in range(3):
     board.extend(map(int, stdin.readline().split()))
 temp_str = ''.join(str(i) for i in board)
+print(temp_str)
 now_board_number = int(temp_str,9)
 
 def convert_9(n: int) -> str:
@@ -52,13 +53,13 @@ def get_connected_nodes(now: int):
 def BFS_final(start):
     visited = defaultdict(lambda: False)
     visited[start] = True
-    final_board = 42374116
+    final_board = 54480996
     distance = defaultdict(lambda: 0)
     queue = deque()
     queue.append(start)
     while queue:
         now = queue.popleft()
-        print('now는 ', convert_9(now))
+        #print('now는 ', convert_9(now))
         for i in get_connected_nodes(now):
             if not visited[i]:
                 if i == final_board:
