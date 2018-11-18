@@ -7,19 +7,21 @@
 Python3  KB  ms
 PyPy3  KB  ms
 스택을 이용한 문제로 열린 괄호 - 열린괄호, 열린 괄호 - 닫힌 괄호, 숫자 - 닫힌 괄호 등으로 케이스를 나눠서 풀면 된다.
+현재 구현에서 막히는 중이다.
 '''
 from sys import stdin
 from collections import deque
 
+def match(first, second):
+    if first == '(' and second == ')':
+        return True
+    elif first == '(' and second == ')':
+        return True
+    else:
+        return False
+
 in_string = list(stdin.readable().rstrip())
 bracket_stack = deque()
-idx = 0
-bracket_stack.append(in_string[idx])
-while bracket_stack :
-    if idx == len(in_string):
-        break
-    elif:
-        idx += 1
-    else:
-        pass
-print(bracket_stack.pop())
+bracket_stack.append(in_string[0])
+temp = in_string[1]
+while
